@@ -41,3 +41,8 @@ curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dear
     sudo apt-get -y update
 
 sudo apt-get install -y nvidia-container-toolkit
+
+##---RESTART DOCKER DAEMON---##
+#This step is absolutely essential.  It stops the "can not connect to driver" issue with docker
+
+systemctl restart docker
